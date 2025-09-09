@@ -1,0 +1,64 @@
+/*
+File: style.css
+GUI Assignment: Creating Your First Web Page
+Camila Salinas Camacho, UMass Lowell Computer Science Student, Camila_SalinasCamacho@student.uml.edu
+Created on: September 8, 2025
+Description: External stylesheet for the Legend of Zelda webpage. 
+             The theme uses earthy greens and golds to reflect the series. 
+*/
+
+/* General Page Layout */
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  margin: 40px;
+  background-color: #f5fff5; /* light green background */
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Headings */
+h1 {
+  color: #0b3d0b;
+  text-align: center;
+  border-bottom: 3px solid #0b3d0b;
+  padding-bottom: 10px;
+}
+h2 {
+  color: #006400;
+  margin-top: 30px;
+}
+
+/* Links */
+a {
+  color: #b8860b; /* golden */
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #0b3d0b;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #fff;
+}
+th, td {
+  border: 1px solid #555;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #d0f0c0; /* pale green */
+  color: #003300;
+}
+
+/* Images */
+img {
+  display: block;
+  margin: 20px auto;
+  border: 3px solid #0b3d0b;
+  border-radius: 8px;
+}
