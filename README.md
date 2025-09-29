@@ -4,7 +4,7 @@
 
 ## 📂 Assignments
 
-- [HW1 – Assignment Title](http://camilasalinasc.github.io/HW1/index.html)
+- [HW1 – The Legend of Zelda](http://camilasalinasc.github.io/HW1/index.html)
 - [HW2 – Pacific Trails Resort](http://camilasalinasc.github.io/HW2/index.html)
 
 ---
