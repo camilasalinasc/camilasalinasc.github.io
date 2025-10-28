@@ -1,0 +1,55 @@
+<!--
+  Author: Camila Salinas Camacho
+  GitHub Username: camilasalinasc
+  Student Email: Camila_SalinasCamacho@student.uml.edu
+
+  References / Sources:
+    - W3Schools HTML Forms Tutorial: https://www.w3schools.com/html/html_forms.asp
+    - W3Schools HTML Tables Tutorial: https://www.w3schools.com/html/html_tables.asp
+    - W3Schools HTML DOM Reference: https://www.w3schools.com/jsref/dom_obj_document.asp
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Multiplication Table</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Interactive Multiplication Table</h1>
+  </header>
+
+  <section id="form-section">
+    <form id="tableForm">
+      <div class="input-group">
+        <label for="hStart">Horizontal Start:</label>
+        <input type="number" id="hStart" required>
+      </div>
+      <div class="input-group">
+        <label for="hEnd">Horizontal End:</label>
+        <input type="number" id="hEnd" required>
+      </div>
+      <div class="input-group">
+        <label for="vStart">Vertical Start:</label>
+        <input type="number" id="vStart" required>
+      </div>
+      <div class="input-group">
+        <label for="vEnd">Vertical End:</label>
+        <input type="number" id="vEnd" required>
+      </div>
+
+      <button type="submit">Generate Table</button>
+    </form>
+    <p id="error" class="error-msg"></p>
+  </section>
+
+  <section id="table-container">
+    <div id="tableWrapper"></div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

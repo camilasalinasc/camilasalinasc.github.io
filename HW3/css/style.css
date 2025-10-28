@@ -1,0 +1,108 @@
+/*
+  Author: Camila Salinas Camacho
+  GitHub Username: camilasalinasc
+  Student Email: Camila_SalinasCamacho@student.uml.edu
+
+  References / Sources:
+    - W3Schools CSS Selectors Reference: https://www.w3schools.com/cssref/css_selectors.asp
+    - W3Schools CSS nth-child() Pseudo-class: https://www.w3schools.com/cssref/sel_nth-child.php
+    - W3Schools CSS Table Styling: https://www.w3schools.com/css/css_table.asp
+    - W3Schools CSS Position Sticky: https://www.w3schools.com/css/css_positioning.asp
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: #6a2b88;
+  color: #fff;
+  padding: 1rem;
+}
+
+form {
+  margin: 20px auto;
+  color: #fff;
+  padding: 10px;
+  background: #9974aa;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.input-group {
+  margin: 10px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+button {
+  background: #6a2b88;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3d184e;
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+}
+
+#table-container {
+  max-width: 90%;
+  margin: 20px auto;
+  overflow: auto;
+  height: 70vh;
+  border: 2px solid #ccc;
+  background: white;
+  position: relative;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
+
+th, td {
+  border: 1px solid #6a2b88;
+  padding: 8px;
+  text-align: center;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: #c0aaca;
+  z-index: 2;
+}
+
+tbody th {
+  position: sticky;
+  left: 0;
+  background: #c0aaca;
+  z-index: 1;
+}
+
+tr:nth-child(even) td {
+  background: #eae4ec;
+}
