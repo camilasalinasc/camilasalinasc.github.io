@@ -6,6 +6,7 @@
 
 - [HW1 – The Legend of Zelda](http://camilasalinasc.github.io/HW1/index.html)
 - [HW2 – Pacific Trails Resort](http://camilasalinasc.github.io/HW2/index.html)
+- [HW3 – Interactive Multiplication Table](http://camilasalinasc.github.io/HW3/index.html)
 
 ---
 
