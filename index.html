@@ -1,0 +1,62 @@
+<!--
+  Author: Camila Salinas Camacho
+  GitHub Username: camilasalinasc
+  Student Email: Camila_SalinasCamacho@student.uml.edu
+
+  References / Sources:
+    - W3Schools HTML Forms Tutorial: https://www.w3schools.com/html/html_forms.asp
+    - W3Schools HTML Tables Tutorial: https://www.w3schools.com/html/html_tables.asp
+    - jQuery Validation Plugin: https://jqueryvalidation.org/
+    - jQuery Validation Documentation: https://jqueryvalidation.org/documentation/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Multiplication Table - Part 1</title>
+  <link rel="stylesheet" href="css/style.css" />
+  
+  <!-- jQuery Library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- jQuery Validation Plugin -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Interactive Multiplication Table</h1>
+    <p>Enter values between -50 and 50</p>
+  </header>
+
+  <section id="form-section">
+    <form id="tableForm">
+      <div class="input-group">
+        <label for="hStart">Horizontal Start:</label>
+        <input type="number" id="hStart" name="hStart" required>
+      </div>
+      <div class="input-group">
+        <label for="hEnd">Horizontal End:</label>
+        <input type="number" id="hEnd" name="hEnd" required>
+      </div>
+      <div class="input-group">
+        <label for="vStart">Vertical Start:</label>
+        <input type="number" id="vStart" name="vStart" required>
+      </div>
+      <div class="input-group">
+        <label for="vEnd">Vertical End:</label>
+        <input type="number" id="vEnd" name="vEnd" required>
+      </div>
+
+      <button type="submit">Generate Table</button>
+    </form>
+  </section>
+
+  <section id="table-container">
+    <div id="tableWrapper"></div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

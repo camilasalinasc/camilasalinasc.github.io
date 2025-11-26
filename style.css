@@ -1,0 +1,142 @@
+/*
+  Author: Camila Salinas Camacho
+  GitHub Username: camilasalinasc
+  Student Email: Camila_SalinasCamacho@student.uml.edu
+
+  References / Sources:
+    - W3Schools CSS Selectors Reference: https://www.w3schools.com/cssref/css_selectors.asp
+    - W3Schools CSS nth-child() Pseudo-class: https://www.w3schools.com/cssref/sel_nth-child.php
+    - W3Schools CSS Table Styling: https://www.w3schools.com/css/css_table.asp
+    - W3Schools CSS Position Sticky: https://www.w3schools.com/css/css_positioning.asp
+*/
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background: #6a2b88;
+  color: #fff;
+  padding: 1rem;
+}
+
+header p {
+  margin: 5px 0 0 0;
+  font-size: 0.9em;
+  opacity: 0.9;
+}
+
+form {
+  margin: 20px auto;
+  color: #fff;
+  padding: 20px;
+  background: #9974aa;
+  width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.input-group {
+  margin: 15px 0;
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6a2b88;
+}
+
+/* Error styling for invalid inputs */
+input.error-input {
+  border-color: #ff4444;
+  background-color: #ffe6e6;
+}
+
+button {
+  background: #6a2b88;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+button:hover {
+  background: #3d184e;
+}
+
+/* Error message styling */
+.error-msg {
+  color: #ff4444;
+  font-weight: bold;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 8px;
+  border-radius: 3px;
+  border-left: 3px solid #ff4444;
+}
+
+#table-container {
+  max-width: 90%;
+  margin: 20px auto;
+  overflow: auto;
+  height: 70vh;
+  border: 2px solid #ccc;
+  background: white;
+  position: relative;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
+
+th, td {
+  border: 1px solid #6a2b88;
+  padding: 8px;
+  text-align: center;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  background: #c0aaca;
+  z-index: 2;
+}
+
+tbody th {
+  position: sticky;
+  left: 0;
+  background: #c0aaca;
+  z-index: 1;
+}
+
+tr:nth-child(even) td {
+  background: #eae4ec;
+}
