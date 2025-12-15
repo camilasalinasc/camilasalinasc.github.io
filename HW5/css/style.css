@@ -1,0 +1,442 @@
+/*
+  Author: Camila Salinas Camacho
+  GitHub Username: camilasalinasc
+  Student Email: Camila_SalinasCamacho@student.uml.edu
+
+  Description: Purple-themed styles for the single-line Scrabble game.
+
+  References / Sources:
+    - W3Schools CSS Flexbox: https://www.w3schools.com/css/css3_flexbox.asp
+    - W3Schools CSS Variables: https://www.w3schools.com/css/css3_variables.asp
+    - W3Schools CSS Gradients: https://www.w3schools.com/css/css3_gradients.asp
+    - W3Schools CSS Box Shadow: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp
+    - jQuery UI Theming: https://jqueryui.com/themeroller/
+    - Google Fonts - Bubblegum Sans: https://fonts.google.com/specimen/Bubblegum+Sans
+*/
+
+/* ===== CSS Variables - Purple Palette ===== */
+:root {
+    --purple-lightest: #E6D7F1;
+    --purple-light: #B9A5D1;
+    --purple-medium: #8673A1;
+    --purple-dark: #53427A;
+    --white: #ffffff;
+    --black: #1a1a1a;
+    --cream: #d4c4a8;
+    --score-red: #8B0000;
+    --score-green: #228B22;
+}
+
+/* ===== Reset and Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--purple-light);
+    min-height: 100vh;
+    padding: 30px 20px;
+    color: #333;
+}
+
+/* ===== Header ===== */
+header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.game-title {
+    font-family: 'Bubblegum Sans', cursive;
+    font-size: 4rem;
+    color: var(--purple-dark);
+    text-shadow: 
+        3px 3px 0 var(--white),
+        4px 4px 0 rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.05em;
+}
+
+/* ===== Main Container ===== */
+.game-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ===== Instructions Box ===== */
+.instructions-box {
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    width: 100%;
+    max-width: 1000px;
+    box-shadow: 0 4px 15px rgba(83, 66, 122, 0.15);
+    border: 1px solid var(--purple-lightest);
+}
+
+.instructions-box h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--black);
+}
+
+.instructions-box p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.instructions-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== Score Display ===== */
+.score-display {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 15px;
+    padding: 10px 20px;
+    background-color: var(--purple-lightest);
+    border-radius: 8px;
+    border: 2px solid var(--purple-medium);
+}
+
+.score-label {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.score-label.total {
+    color: var(--score-red);
+}
+
+.score-label.current {
+    color: var(--score-green);
+}
+
+/* ===== Control Buttons ===== */
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-dark {
+    background-color: var(--purple-dark);
+    color: var(--white);
+}
+
+.btn-dark:hover {
+    background-color: #3d3160;
+    transform: translateY(-1px);
+}
+
+.btn-purple {
+    background-color: var(--purple-medium);
+    color: var(--white);
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-dark);
+    transform: translateY(-1px);
+}
+
+/* ===== Board Section ===== */
+.board-section {
+    margin-bottom: 25px;
+}
+
+.board-frame {
+    background-color: var(--black);
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.scrabble-board {
+    display: flex;
+    gap: 3px;
+}
+
+.board-square {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #333;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.15;
+    background-color: var(--cream);
+    color: #555;
+    position: relative;
+    transition: all 0.15s ease;
+}
+
+.board-square.double-word {
+    background-color: #e8b4b4;
+    color: #8B0000;
+}
+
+.board-square.double-letter {
+    background-color: #b4c8e8;
+    color: #00008B;
+}
+
+.board-square.triple-letter {
+    background-color: #4169E1;
+    color: white;
+}
+
+.board-square.triple-word {
+    background-color: #DC143C;
+    color: white;
+}
+
+.board-square.ui-droppable-hover {
+    background-color: #90EE90 !important;
+    box-shadow: 0 0 15px rgba(50, 205, 50, 0.5);
+    transform: scale(1.02);
+}
+
+.board-square.occupied {
+    padding: 3px;
+    background-color: var(--cream);
+}
+
+.board-square .tile-on-board {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+/* ===== Game Row (Swap + Rack) ===== */
+.game-row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* ===== Swap Container ===== */
+.swap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.swap-area {
+    width: 450px;
+    height: 90px;
+    border: 2px solid var(--purple-dark);
+    border-radius: 10px;
+    background-color: var(--white);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.swap-area:hover {
+    border-color: var(--purple-medium);
+    box-shadow: 0 0 10px rgba(134, 115, 161, 0.3);
+}
+
+.swap-icon {
+    font-size: 2rem;
+    color: var(--purple-light);
+    opacity: 0.6;
+}
+
+.swap-area.has-tiles .swap-icon {
+    display: none;
+}
+
+.swap-area .tile {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+}
+
+/* ===== Rack Container ===== */
+.rack-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tile-rack {
+    background: url('../images/scrabble-tile-holder-406774_640.png') center/cover no-repeat;
+    min-height: 95px;
+    width: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 18px 35px;
+    border-radius: 10px;
+    box-shadow: 
+        0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== Tiles ===== */
+.tile {
+    width: 55px;
+    height: 55px;
+    cursor: grab;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+    z-index: 10;
+}
+
+.tile:hover {
+    transform: scale(1.08);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+.tile.ui-draggable-dragging {
+    cursor: grabbing;
+    transform: scale(1.15);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1000 !important;
+}
+
+/* ===== Message Area ===== */
+.message-area {
+    min-height: 35px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#game-message {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 8px 20px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+#game-message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+#game-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+#game-message.info {
+    background-color: var(--purple-lightest);
+    color: var(--purple-dark);
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    color: var(--purple-dark);
+    font-size: 0.85rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+    .game-title {
+        font-size: 3rem;
+    }
+    
+    .game-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .board-square {
+        width: 55px;
+        height: 55px;
+        font-size: 0.45rem;
+    }
+    
+    .tile {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .tile-rack {
+        width: 350px;
+        min-height: 80px;
+    }
+    
+    .swap-area {
+        width: 250px;
+    }
+    
+    .score-display {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .game-title {
+        font-size: 2.5rem;
+    }
+    
+    .board-square {
+        width: 42px;
+        height: 42px;
+        font-size: 0.38rem;
+    }
+    
+    .tile {
+        width: 38px;
+        height: 38px;
+    }
+    
+    .tile-rack {
+        width: 300px;
+    }
+    
+    .instructions-box {
+        padding: 15px;
+    }
+    
+    .instructions-box p {
+        font-size: 0.8rem;
+    }
+}
